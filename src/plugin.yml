@@ -1,0 +1,10 @@
+name: cPerms
+main: cibz.cPerms.Main.cPerms
+version: 0.1
+commands:
+  rank:
+    usage: /rank
+  grant:
+    usage: /grant
+  tag:
+    usage: /tag

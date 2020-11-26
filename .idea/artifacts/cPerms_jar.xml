@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cPerms:jar">
+    <output-path>$USER_HOME$/Downloads/Soup/plugins</output-path>
+    <root id="archive" name="cPerms.jar">
+      <element id="module-output" name="cPerms" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Artifacts/1.7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
