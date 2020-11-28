@@ -1,9 +1,11 @@
 package cibz.cPerms.Main;
 
 import cibz.cPerms.Commands.GrantCommand;
+import cibz.cPerms.Commands.ListCommand;
 import cibz.cPerms.Commands.RankCommand;
 import cibz.cPerms.Commands.TagCommand;
 import cibz.cPerms.Listeners.ChatListener;
+import cibz.cPerms.Listeners.ConnectListener;
 import cibz.cPerms.Listeners.GrantGUIListener;
 import cibz.cPerms.Listeners.TagGUIListener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,8 +27,10 @@ public class cPerms extends JavaPlugin {
         getCommand("Tag").setExecutor(new TagCommand());
         getCommand("Rank").setExecutor(new RankCommand());
         getCommand("Grant").setExecutor(new GrantCommand());
+        getCommand("List").setExecutor(new ListCommand());
 
         getServer().getPluginManager().registerEvents(new ChatListener(), this);
+        getServer().getPluginManager().registerEvents(new ConnectListener(), this);
         getServer().getPluginManager().registerEvents(new GrantGUIListener(), this);
         getServer().getPluginManager().registerEvents(new TagGUIListener(), this);
     }

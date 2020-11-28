@@ -95,9 +95,11 @@ public class GrantGUIListener implements Listener {
                     if (e.getCurrentItem().getItemMeta().getDisplayName() != null) {
                         String rank = e.getCurrentItem().getItemMeta().getDisplayName();
                         String r = rank.substring(2);
+                        Ranks.setRank(t, r);
+
                         p.closeInventory();
                         e.setCancelled(true);
-                        Ranks.setRank(t, r);
+
                         p.sendMessage("§dSuccessfully set §f" + t.getName() + "'s §drank to §f" + rank + "§d.");
                     }
                 }
